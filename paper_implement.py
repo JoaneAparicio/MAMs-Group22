@@ -83,9 +83,7 @@ class MMs:
         return self._pw_formula(t)
 
     def _pw_formula(self, t):
-        """Eq. (8) as given by Hillier & Hillier (reference [61] of the paper):
-        P(W>t) = e^{-μt} [1 + P0 (λ/μ)^s / (s!(1-ρ)) * (1 - e^{-μt(s-1-λ/μ)}) / (s-1-λ/μ)]
-        """
+        """Eq. (8): P(W>t) = e^{-μt} [1 + P0 (λ/μ)^s / (s!(1-ρ)) * (1 - e^{-μt(s-1-λ/μ)}) / (s-1-λ/μ)] """
         s, mu, rho, a = self.s, self.mu, self.rho, self.a
         den = s - 1 - a
         if abs(den) < 1e-12:
