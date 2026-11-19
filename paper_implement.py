@@ -26,7 +26,7 @@ HOURS_PER_DAY = 8
 
 # ── Directory structure ──────────────────────────────────────────────────────
 HERE = Path(__file__).resolve().parent
-OUT  = HERE / "Results"
+OUT  = HERE / "Paper Results"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
